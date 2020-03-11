@@ -32,7 +32,7 @@ class App extends React.Component {
         {/* {add another listener} */}
         {/* passing props that will be used in styling  */}
         {/* <Animation width={600} height={600}/> */}
-        <Hover text="TEST"/>
+        <Hover text="VALHALLA"/>
         
       </div>
     );
