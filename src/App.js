@@ -1,26 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import WindowInfo from './windowInfo';
+import Animation from './animation'
+import Hover from './hover';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props){
+    super(props)
+   
+  }
+
+  updateWindowDimensions = () => {
+    // this.setState({
+    //   screenHeight: window.innerHeight,
+    //   screenWidth: window.innerWidth
+    // })
+  }
+
+
+  componentDidMount = () => {
+    // this.updateWindowDimensions()
+    // window.addEventListener('resize', this.updateWindowDimensions)
+  }
+
+
+
+  render() {
+    return (
+      <div className="App" style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}} >
+        <WindowInfo/>
+        {/* {add another listener} */}
+        {/* passing props that will be used in styling  */}
+        {/* <Animation width={600} height={600}/> */}
+        <Hover text="TEST"/>
+        
+      </div>
+    );
+  }
 }
 
 export default App;
